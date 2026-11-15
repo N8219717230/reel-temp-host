@@ -1,0 +1,26 @@
+{
+  "title": "रामायण भाग 1: अयोध्या और चार राजकुमार",
+  "voice": "hm_omega",
+  "speed": 0.95,
+  "lead": 0.4,
+  "outro": 1.2,
+  "gap": 0.3,
+  "music": "bed",
+  "sources": [
+    "Valmiki Ramayana, Bala Kanda (King Dasharatha of Ayodhya on the Sarayu river, childless; the Putrakameshti yajna; three queens Kaushalya, Kaikeyi and Sumitra; four sons Rama, Bharata, Lakshmana and Shatrughna)",
+    "Encyclopaedia Britannica, 'Ramayana' (summary of the epic's Bala Kanda and the sage Vishwamitra asking for Rama)"
+  ],
+  "lines": [
+    { "text": "बहुत समय पहले, सरयू नदी के किनारे,", "caps": "बहुत समय पहले | सरयू नदी के *किनारे" },
+    { "text": "एक भव्य नगर था, अयोध्या।", "caps": "एक भव्य *नगर | *अयोध्या" },
+    { "text": "वहाँ राजा दशरथ राज करते थे,", "caps": "वहाँ राजा *दशरथ | राज करते *थे" },
+    { "text": "जिनके पास सब कुछ था, पर कोई संतान नहीं थी।", "caps": "जिनके पास *सब कुछ | पर कोई *संतान | नहीं थी" },
+    { "text": "तब उन्होंने पुत्रकामेष्टि यज्ञ करवाया,", "caps": "तब उन्होंने *पुत्रकामेष्टि | यज्ञ *करवाया" },
+    { "text": "और प्रसाद को अपनी तीन रानियों में बाँटा।", "caps": "और *प्रसाद को | अपनी तीन *रानियों | में बाँटा", "gap": 0.35 },
+    { "text": "कुछ समय बाद, चार पुत्र जन्मे:", "caps": "कुछ समय बाद | चार *पुत्र जन्मे" },
+    { "text": "राम, भरत, लक्ष्मण और शत्रुघ्न।", "caps": "*राम | *भरत | *लक्ष्मण | और *शत्रुघ्न", "gap": 0.35 },
+    { "text": "पर कहानी अभी शुरू हुई थी।", "caps": "पर *कहानी | अभी *शुरू हुई थी" },
+    { "text": "एक ऋषि, राम को माँगने आने वाले थे।", "caps": "एक *ऋषि | राम को *माँगने | आने वाले थे", "gap": 0.35 },
+    { "text": "अगले भाग में।", "caps": "अगले *भाग में", "gap": 0.2 }
+  ]
+}
