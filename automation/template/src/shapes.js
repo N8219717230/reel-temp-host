@@ -66,3 +66,9 @@ export function bowl(x, y, s, glow = 0) { ctx.save(); ctx.translate(x, y); ctx.s
 export const cutAt = (i) => (i === 0 ? 0 : L(i) - 0.08);
 export const pop = (lt, a, d = 0.3) => (lt > a ? eob(seg(lt, a, a + d)) : 0);
 
+
+// ---- added in Part 2 ----
+export function boulder(x, y, s = 1, a = 1) { ctx.save(); ctx.globalAlpha = a; ctx.translate(x, y); ctx.scale(s, s); cut(P_poly([[-210, 0], [-190, -170], [-90, -300], [60, -330], [170, -230], [220, -80], [200, 0]]), '#8D8A84', { shadow: 0.7, edge: 5 }); cut(P_poly([[-90, -300], [60, -330], [20, -160], [-110, -150]]), '#A6A39C', { shadow: 0.3, edge: 3 }); ctx.restore(); }
+export function hut(x, y, s = 1) { ctx.save(); ctx.translate(x, y); ctx.scale(s, s); cut(P_rr(-170, -200, 340, 200, 6), '#B58A5A', { shadow: 0.7, edge: 5 }); cut(P_poly([[-230, -190], [0, -380], [230, -190]]), '#8A6A3F', { shadow: 0.7, edge: 5 }); cut(P_rr(-40, -140, 80, 140, 40), '#4A3A2E', { shadow: 0.3, edge: 3 }); ctx.restore(); }
+export function forest(t, green = 0, y = 1420) { const cols = ['#2E4A38', '#3E5F3F', '#4F6D4A', '#5E8A4B']; const c = cols[Math.min(3, Math.round(green * 3))]; for (const [x, s] of [[60, 1.5], [230, 1.1], [120, 0.9], [380, 0.8], [700, 0.8], [880, 1.2], [1010, 1.5], [800, 0.9]]) tree(x, y, s, c); }
+export function sparkles(cx, cy, t, n = 10, R = 260) { for (let i = 0; i < n; i++) { const a = i / n * TAU + t * 0.6, r = R * (0.5 + 0.5 * ((t * 0.7 + i * 0.37) % 1)); circle(cx + Math.cos(a) * r, cy + Math.sin(a) * r, 8 + 6 * rnd(i), '#F2C14E'); } }

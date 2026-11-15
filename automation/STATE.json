@@ -1,8 +1,19 @@
 {
   "series": "Ramayan 3D (Hindi, Paper Atlas look)",
-  "next_part": 2,
+  "next_part": 3,
   "total_parts": 15,
   "uploaded": [
-    { "part": 1, "video_id": "KT7f0zg4Q60", "title": "रामायण भाग 1 | अयोध्या और चार राजकुमार | Ramayan Part 1 #shorts", "privacy": "public" }
+    {
+      "part": 1,
+      "video_id": "KT7f0zg4Q60",
+      "title": "रामायण भाग 1 | अयोध्या और चार राजकुमार | Ramayan Part 1 #shorts",
+      "privacy": "public"
+    },
+    {
+      "part": 2,
+      "video_id": "0cMp0uUqiEU",
+      "title": "रामायण भाग 2 | विश्वामित्र, ताड़का और अहल्या | Ramayan Part 2 #shorts",
+      "privacy": "public"
+    }
   ]
 }
