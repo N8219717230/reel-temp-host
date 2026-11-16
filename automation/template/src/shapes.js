@@ -72,3 +72,29 @@ export function boulder(x, y, s = 1, a = 1) { ctx.save(); ctx.globalAlpha = a; c
 export function hut(x, y, s = 1) { ctx.save(); ctx.translate(x, y); ctx.scale(s, s); cut(P_rr(-170, -200, 340, 200, 6), '#B58A5A', { shadow: 0.7, edge: 5 }); cut(P_poly([[-230, -190], [0, -380], [230, -190]]), '#8A6A3F', { shadow: 0.7, edge: 5 }); cut(P_rr(-40, -140, 80, 140, 40), '#4A3A2E', { shadow: 0.3, edge: 3 }); ctx.restore(); }
 export function forest(t, green = 0, y = 1420) { const cols = ['#2E4A38', '#3E5F3F', '#4F6D4A', '#5E8A4B']; const c = cols[Math.min(3, Math.round(green * 3))]; for (const [x, s] of [[60, 1.5], [230, 1.1], [120, 0.9], [380, 0.8], [700, 0.8], [880, 1.2], [1010, 1.5], [800, 0.9]]) tree(x, y, s, c); }
 export function sparkles(cx, cy, t, n = 10, R = 260) { for (let i = 0; i < n; i++) { const a = i / n * TAU + t * 0.6, r = R * (0.5 + 0.5 * ((t * 0.7 + i * 0.37) % 1)); circle(cx + Math.cos(a) * r, cy + Math.sin(a) * r, 8 + 6 * rnd(i), '#F2C14E'); } }
+
+// ── Part 3 ──
+/** Shiva's great bow: a thick paper crescent with gold tips. broken 0..1 splits it into two halves. */
+export function bow(x, y, s = 1, broken = 0, glow = 0, rot = 0) {
+  ctx.save(); ctx.translate(x, y); ctx.rotate(rot); ctx.scale(s, s);
+  if (glow > 0) { const g = ctx.createRadialGradient(0, 0, 20, 0, 0, 420); g.addColorStop(0, `rgba(240,200,110,${0.55 * glow})`); g.addColorStop(1, 'rgba(240,200,110,0)'); ctx.fillStyle = g; ctx.fillRect(-440, -440, 880, 880); }
+  const half = (sign) => {
+    const g = broken * 90;
+    ctx.save(); ctx.translate(sign * g, broken * 40 * (sign > 0 ? 1 : 0.4)); ctx.rotate(sign * broken * 0.35);
+    const path = () => { ctx.beginPath(); ctx.moveTo(0, -300); ctx.quadraticCurveTo(sign * 230, -150, sign * 200, 0); ctx.quadraticCurveTo(sign * 230, 150, 0, 300); ctx.quadraticCurveTo(sign * 150, 140, sign * 125, 0); ctx.quadraticCurveTo(sign * 150, -140, 0, -300); ctx.closePath(); };
+    // flip so each half is a half-crescent opening toward the middle
+    ctx.save(); ctx.scale(1, 1); cut(() => { ctx.beginPath(); ctx.moveTo(0, -300); ctx.bezierCurveTo(sign * 260, -250, sign * 260, -80, sign * 150, 0); ctx.lineTo(sign * 110, 0); ctx.bezierCurveTo(sign * 200, -80, sign * 200, -200, 0, -250); ctx.closePath(); }, P.ink, { shadow: 0.7, edge: 4 }); ctx.restore();
+    ctx.restore();
+  };
+  // draw as one crescent when intact: two mirrored top/bottom halves meeting at the grip
+  for (const sg of [-1, 1]) {
+    ctx.save(); ctx.translate(0, sg * broken * 60); ctx.rotate(sg * broken * 0.3);
+    cut(() => { ctx.beginPath(); ctx.moveTo(-60, 0); ctx.bezierCurveTo(-60, sg * 120, -20, sg * 300, 210, sg * 330); ctx.lineTo(210, sg * 290); ctx.bezierCurveTo(10, sg * 270, 20, sg * 120, 40, 0); ctx.closePath(); }, '#3B2A22', { shadow: 0.7, edge: 4 });
+    cut(P_circ(210, sg * 310, 24), P.gold, { shadow: 0.4, edge: 3 });
+    ctx.restore();
+  }
+  if (!broken) { cut(P_rr(-70, -40, 120, 80, 14), P.gold, { shadow: 0.5, edge: 4 }); line([[210, -310], [210, 310]], P.sepia, 5); }
+  ctx.restore();
+}
+/** a low wooden stand for the bow */
+export function stand(x, y, s = 1) { ctx.save(); ctx.translate(x, y); ctx.scale(s, s); cut(P_poly([[-300, 0], [300, 0], [260, -60], [-260, -60]]), P.sepia); cut(P_rr(-240, -20, 480, 40, 6), P.stoneDark, { shadow: 0.3, edge: 3 }); ctx.restore(); }

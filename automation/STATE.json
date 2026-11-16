@@ -1,6 +1,6 @@
 {
   "series": "Ramayan 3D (Hindi, Paper Atlas look)",
-  "next_part": 3,
+  "next_part": 4,
   "total_parts": 15,
   "uploaded": [
     {
@@ -13,6 +13,12 @@
       "part": 2,
       "video_id": "0cMp0uUqiEU",
       "title": "रामायण भाग 2 | विश्वामित्र, ताड़का और अहल्या | Ramayan Part 2 #shorts",
+      "privacy": "public"
+    },
+    {
+      "part": 3,
+      "video_id": "B7qzjewXPko",
+      "title": "रामायण भाग 3 | सीता स्वयंवर और शिव धनुष | Ramayan Part 3 #shorts",
       "privacy": "public"
     }
   ]
