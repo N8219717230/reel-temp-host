@@ -1,4 +1,4 @@
-# Project 4 - daily history documentary -> YouTube (channel: Zapier connection "YouTube #4")
+# Project 4 - daily history documentary -> YouTube (channel "Info" @traveldina: Zapier connection "YouTube #5")
 
 Each run makes ONE ~60 s 16:9 documentary (animated map + free local narration + synthesized music + subtitles) and uploads it PUBLIC.
 Everything below runs in the cloud workspace; nothing needs the user's computer.
@@ -13,7 +13,7 @@ Everything below runs in the cloud workspace; nothing needs the user's computer.
    (needs ~120 MB model + 2 GeoJSON downloads from GitHub, all allowed; a render takes 10-20 min: poll with `sleep 500; tail -2 build.log` in the foreground).
 6. QA (never skip): ffprobe duration/streams, mean volume (about -15 dB), and LOOK at 8+ frames (`ffmpeg -ss T -i video.mp4 -frames:v 1`): pins inside the picture, no text overlapping, subtitles readable, geography matches the sentence. Fix story.json and rebuild if wrong (maps and models are cached in the run dir).
 7. Host: copy to `project4/videos/<date>.mp4`, commit, push, URL `https://raw.githubusercontent.com/N8219717230/reel-temp-host/main/project4/videos/<date>.mp4`; `curl -sSI` must return 200 with a video type.
-8. Upload with the Zapier YouTube "upload_video" action, connection_id `021d3a74-6d92-862d-95e6-b9bfd9c0997e` (YouTube #4): params video=<raw url>, title, description (2-3 sentences + "Sources:" with the URLs used), tags (5-8), category_id "27", privacy_status "public", made_for_kids false, embeddable true, notify_subscribers true, default_language "en", license "youtube". Inspect the action schema first (inspect_zapier_actions) because parameter names can change.
+8. Upload with the Zapier YouTube "upload_video" action, connection_id `027e380e-9f8c-8f74-9dfb-f8c69ab8dcfb` (YouTube #5, channel Info): params video=<raw url>, title, description (2-3 sentences + "Sources:" with the URLs used), tags (5-8), category_id "27", privacy_status "public", made_for_kids false, embeddable true, notify_subscribers true, default_language "en", license "youtube". Inspect the action schema first (inspect_zapier_actions) because parameter names can change.
 9. Cleanup: `git rm` the video, append the topic to `project4/topics-used.md` as `- <topic> (used <date>, https://youtube.com/watch?v=<id>)`, commit, push.
 10. Report: title, YouTube link, one line on anything that looked off.
 
