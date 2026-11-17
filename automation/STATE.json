@@ -1,6 +1,6 @@
 {
   "series": "Ramayan 3D (Hindi, Paper Atlas look)",
-  "next_part": 4,
+  "next_part": 5,
   "total_parts": 15,
   "uploaded": [
     {
@@ -19,6 +19,12 @@
       "part": 3,
       "video_id": "B7qzjewXPko",
       "title": "रामायण भाग 3 | सीता स्वयंवर और शिव धनुष | Ramayan Part 3 #shorts",
+      "privacy": "public"
+    },
+    {
+      "part": 4,
+      "video_id": "manual-upload-by-user",
+      "title": "रामायण भाग 4 | कैकेयी के दो वरदान | Ramayan Part 4 #shorts",
       "privacy": "public"
     }
   ]
