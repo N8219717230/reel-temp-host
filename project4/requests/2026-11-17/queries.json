@@ -1,7 +1,6 @@
 {"per": 4, "queries": [
-{"id":"library","q":"Ancient Library of Alexandria engraving"},
-{"id":"eratos","q":"Eratosthenes statue"},
-{"id":"scrolls","q":"papyrus scrolls ancient library"},
-{"id":"serapeum","q":"Pompey's Pillar Serapeum Alexandria"},
-{"id":"pharos","q":"Pharos of Alexandria lighthouse reconstruction"}
+{"id":"library","q":"Library of Alexandria Ancient Alexandria O. Von Corven"},
+{"id":"eratos","q":"Eratosthenes"},
+{"id":"museum","q":"Alexandria Mouseion Great Library illustration"},
+{"id":"ruins","q":"Roman Amphitheatre Kom el Dikka Alexandria"}
 ]}
