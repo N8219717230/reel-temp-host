@@ -1,0 +1,44 @@
+[
+ {
+  "query_id": "wolf",
+  "title": "File:Gray Wolf (Canis lupus) (119671563).jpg",
+  "artist": "Derek Bakken from Minneapolis, MN",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Gray_Wolf_(Canis_lupus)_(119671563).jpg"
+ },
+ {
+  "query_id": "husky",
+  "title": "File:A Siberian husky sled dog curled up in the snow in Long Lake.jpg",
+  "artist": "Lorie Shaull / Lorie Shaull",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:A_Siberian_husky_sled_dog_curled_up_in_the_snow_in_Long_Lake.jpg"
+ },
+ {
+  "query_id": "sled",
+  "title": "File:Greenland Sled Dogs (3671076760).jpg",
+  "artist": "Christine  Zenino from Chicago, US",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Greenland_Sled_Dogs_(3671076760).jpg"
+ },
+ {
+  "query_id": "grave",
+  "title": "File:Hund Doppelgrab Oberkassel.jpg",
+  "artist": "Thilo Parg",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Hund_Doppelgrab_Oberkassel.jpg"
+ },
+ {
+  "query_id": "skel",
+  "title": "File:Dog skeleton oberkassel.jpg",
+  "artist": "Don Hitchcock",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Dog_skeleton_oberkassel.jpg"
+ },
+ {
+  "query_id": "lascaux",
+  "title": "File:Lascaux Megaloceros.jpg",
+  "artist": "",
+  "license": "",
+  "page": null
+ }
+]
