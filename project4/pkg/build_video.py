@@ -40,7 +40,12 @@ for i, s in enumerate(STORY['sentences']):
     sp = s.get('shot', {})
     if sp.get('img') and (os.path.exists(f"{ROOT}/img/{sp['img']}.jpg") or os.path.exists(f"{ROOT}/color/{sp['img']}.png")):
         d = {'t0': t0, 't1': t1, 'type': 'photo', 'img': sp['img'], 'bw2c': 1.0, 'z': [1.0, 1.1]}
-        if sp.get('fit'): d['fit'] = True
+        try:
+            from PIL import Image as _I
+            _f = f"{ROOT}/img/{sp['img']}.jpg" if os.path.exists(f"{ROOT}/img/{sp['img']}.jpg") else f"{ROOT}/color/{sp['img']}.png"
+            _w, _h = _I.open(_f).size
+            if sp.get('fit', _w / _h < 1.45): d['fit'] = True   # portrait / narrow images are framed on a blurred backdrop
+        except Exception: pass
         if sp.get('rib'): d['rib'] = sp['rib']
     else:
         cam = sp.get('cam', [20, 30, 140]); d = {'t0': t0, 't1': t1, 'type': 'map', 'cam0': cam, 'cam1': sp.get('cam_end', [cam[0], cam[1], cam[2] * 0.8])}
