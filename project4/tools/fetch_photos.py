@@ -10,6 +10,12 @@ OK = re.compile(r'^(public domain|pd|cc0|cc[- ]by(?![- ]?(nc|nd))|cc[- ]by[- ]sa
 def clean(s): return html.unescape(re.sub(r'<[^>]+>', '', s or '')).strip()
 meta = []
 for item in Q['queries']:
+    if item.get('title'):   # metadata-only lookup of a known Commons file: {"id": "x", "title": "File:Name.jpg", "meta_only": true}
+        r = S.get('https://commons.wikimedia.org/w/api.php', params={'action': 'query', 'format': 'json', 'titles': item['title'], 'prop': 'imageinfo', 'iiprop': 'url|extmetadata'}, timeout=60).json()
+        for p in r['query']['pages'].values():
+            ii = (p.get('imageinfo') or [{}])[0]; em = ii.get('extmetadata', {})
+            meta.append({'query_id': item['id'], 'title': p['title'], 'artist': clean(em.get('Artist', {}).get('value')), 'license': clean(em.get('LicenseShortName', {}).get('value')), 'page': ii.get('descriptionurl')})
+        continue
     r = S.get('https://commons.wikimedia.org/w/api.php', params={'action': 'query', 'format': 'json', 'generator': 'search', 'gsrsearch': item['q'] + ' filetype:bitmap', 'gsrnamespace': 6, 'gsrlimit': 30,
         'prop': 'imageinfo', 'iiprop': 'url|size|mime|extmetadata', 'iiurlwidth': 1920}, timeout=60).json()
     pages = sorted((r.get('query', {}).get('pages', {})).values(), key=lambda p: p.get('index', 99))
