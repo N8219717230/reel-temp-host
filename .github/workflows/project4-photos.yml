@@ -1,0 +1,26 @@
+name: project4-photos
+on:
+  push:
+    paths: ['project4/requests/**/queries.json']
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 2}
+      - run: pip install -q requests pillow
+      - name: fetch photos for new/changed requests
+        run: |
+          for f in $(git diff --name-only HEAD~1 HEAD -- 'project4/requests/**/queries.json'); do
+            d=$(basename $(dirname $f))
+            python3 project4/tools/fetch_photos.py $f project4/photos/$d
+          done
+      - name: commit
+        run: |
+          git config user.name "project4-bot"; git config user.email "bot@users.noreply.github.com"
+          git add project4/photos
+          git commit -m "project4: photos fetched [skip ci]" || exit 0
+          git pull --rebase -q origin ${GITHUB_REF_NAME} || true
+          git push
