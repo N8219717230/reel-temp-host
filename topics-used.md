@@ -4,3 +4,4 @@
 - The Pig War, San Juan Island 1859 (used 2026-11-16)
 - The man who sold the Eiffel Tower, Victor Lustig 1925 (used 2026-11-16)
 - The Great Stork Derby, Charles Vance Millar's will, Toronto 1926 (used 2026-11-17)
+- The War of the Bucket, Modena vs Bologna 1325 (used 2026-11-17, Hindi)
