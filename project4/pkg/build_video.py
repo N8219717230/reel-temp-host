@@ -62,6 +62,6 @@ sh('ffmpeg', '-y', '-loglevel', 'error', '-i', f'{ROOT}/audio/vo.wav', '-i', f'{
    f'[1:a]aformat=sample_rates=48000:channel_layouts=stereo,atrim=0:{DUR},asetpts=PTS-STARTPTS,afade=t=in:d=3,afade=t=out:st={fo}:d=6,volume=0.55[m];'
    f'[m][vsc]sidechaincompress=threshold=0.02:ratio=8:attack=80:release=600[md];[2:a]aformat=sample_rates=48000:channel_layouts=stereo,atrim=0:{DUR},volume=0.2[w];'
    f'[v1][md][w]amix=inputs=3:normalize=0:duration=first,atrim=0:{DUR},loudnorm=I=-14:TP=-1.5:LRA=11[out]', '-map', '[out]', '-ar', '48000', f'{ROOT}/audio/mix.wav')
-sh('ffmpeg', '-y', '-loglevel', 'error', '-i', f'{ROOT}/out/video_noaudio.mp4', '-i', f'{ROOT}/audio/mix.wav', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '22',
+sh('ffmpeg', '-y', '-loglevel', 'error', '-i', f'{ROOT}/out/video_noaudio.mp4', '-i', f'{ROOT}/audio/mix.wav', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '27', '-maxrate', '4M', '-bufsize', '8M',
    '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', f'{ROOT}/out/video.mp4')
 print('DONE', f'{ROOT}/out/video.mp4', DUR)
