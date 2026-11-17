@@ -1,0 +1,1 @@
+Part 4 rendered OK; upload throttled by Zapier. Rendered mp4 is on branch video-ramayan-04 (video/ramayan-part04.mp4), audio on audio-ramayan-04. Next run: upload that URL directly (skip steps 4-10) if the branch still exists, then do step 12 cleanup.
