@@ -13,7 +13,7 @@ jobs:
       - run: pip install -q requests pillow
       - name: fetch photos for new/changed requests
         run: |
-          for f in $(git diff --name-only HEAD~1 HEAD -- 'project4/requests/**/queries.json'); do
+          for f in $(git diff --name-only --diff-filter=AM HEAD~1 HEAD -- 'project4/requests/**/queries.json'); do
             d=$(basename $(dirname $f))
             python3 project4/tools/fetch_photos.py $f project4/photos/$d
           done
