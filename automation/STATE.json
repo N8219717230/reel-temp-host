@@ -1,6 +1,6 @@
 {
   "series": "Ramayan 3D (Hindi, Paper Atlas look)",
-  "next_part": 5,
+  "next_part": 6,
   "total_parts": 15,
   "uploaded": [
     {
@@ -25,6 +25,12 @@
       "part": 4,
       "video_id": "manual-upload-by-user",
       "title": "रामायण भाग 4 | कैकेयी के दो वरदान | Ramayan Part 4 #shorts",
+      "privacy": "public"
+    },
+    {
+      "part": 5,
+      "video_id": "dzxYdCBKnbY",
+      "title": "रामायण भाग 5 | भरत और राम की पादुका | Ramayan Part 5 #shorts",
       "privacy": "public"
     }
   ]
