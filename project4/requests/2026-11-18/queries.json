@@ -1,0 +1,7 @@
+{"per": 4, "queries": [
+{"id": "library", "q": "Ancient Library of Alexandria engraving"},
+{"id": "caesar", "q": "Julius Caesar bust"},
+{"id": "serapeum", "q": "Serapeum of Alexandria Pompey's Pillar"},
+{"id": "biblio", "q": "Bibliotheca Alexandrina"},
+{"id": "pharos", "q": "Alexandria Pharos lighthouse illustration"}
+]}
