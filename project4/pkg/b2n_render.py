@@ -20,7 +20,13 @@ TOP = (H - PH) // 2
 DUR = float(TL['duration'])
 S = W / 1920.0  # scale for fonts/sizes
 
+HI = os.environ.get('P4_LANG', 'en') == 'hi'
 def font(name, size, var=None):
+    if HI:  # Hindi: Devanagari glyphs need a Devanagari font for every text element
+        f = ImageFont.truetype(f'{ROOT}/fonts/NotoSansDevanagari.ttf', int(size * S * 1.05))
+        try: f.set_variation_by_axes([700 if var in ('SemiBold', 'Bold') else 500, 100])
+        except Exception: pass
+        return f
     f = ImageFont.truetype(f'{ROOT}/fonts/{name}.ttf', int(size * S))
     if var:
         try: f.set_variation_by_name(var)

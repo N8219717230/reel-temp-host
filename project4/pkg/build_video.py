@@ -20,12 +20,18 @@ if not os.path.exists(f'{ROOT}/maps/world.jpg'): sh('python3', f'{HERE}/make_map
 KB = 'https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/'
 for n in ['kokoro-v1.0.int8.onnx', 'voices-v1.0.bin']: fetch(KB + n, f'{ROOT}/models/{n}')
 # --- narration, one sentence at a time so timings are exact
-from kokoro_onnx import Kokoro
-k = Kokoro(f'{ROOT}/models/kokoro-v1.0.int8.onnx', f'{ROOT}/models/voices-v1.0.bin')
+LANG = STORY.get('lang', 'en'); os.environ['P4_LANG'] = LANG
+if LANG != 'hi':
+    from kokoro_onnx import Kokoro
+    k = Kokoro(f'{ROOT}/models/kokoro-v1.0.int8.onnx', f'{ROOT}/models/voices-v1.0.bin')
 SR = 24000; GAP = 0.6; OFF = 2.0
 parts, times, t = [], [], 0.0
-for s in STORY['sentences']:
-    a, sr = k.create(s['text'], voice=STORY.get('voice', 'am_michael'), speed=STORY.get('speed', 0.95), lang='en-us')
+for si, s in enumerate(STORY['sentences']):
+    if LANG == 'hi':  # Hindi narration: one ElevenLabs mp3 per sentence at <root>/hi_audio/<i>.mp3 (see RUNBOOK)
+        sh('ffmpeg', '-y', '-loglevel', 'error', '-i', f'{ROOT}/hi_audio/{si}.mp3', '-ar', str(24000), '-ac', '1', f'{ROOT}/audio/hi_{si}.wav')
+        a, sr = sf.read(f'{ROOT}/audio/hi_{si}.wav')
+    else:
+        a, sr = k.create(s['text'], voice=STORY.get('voice', 'am_michael'), speed=STORY.get('speed', 0.95), lang='en-us')
     a = np.asarray(a, np.float32); times.append((t, t + len(a) / sr)); parts.append(a); t += len(a) / sr + GAP
     parts.append(np.zeros(int(GAP * sr), np.float32))
 vo = np.concatenate(parts); sf.write(f'{ROOT}/audio/vo24.wav', vo, SR)
