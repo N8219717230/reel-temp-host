@@ -6,3 +6,4 @@
 - The Great Stork Derby, Charles Vance Millar's will, Toronto 1926 (used 2026-11-17)
 - The War of the Bucket, Modena vs Bologna 1325 (used 2026-11-17, Hindi)
 - The Whisky War, Hans Island, Canada vs Denmark 1984 (used 2026-11-18)
+- The Cardiff Giant hoax, George Hull & P.T. Barnum 1869 (used 2026-11-19)
