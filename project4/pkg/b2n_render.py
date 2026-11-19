@@ -32,7 +32,7 @@ def font(name, size, var=None):
         try: f.set_variation_by_name(var)
         except Exception: pass
     return f
-F_SUB = font('Montserrat', 34, 'SemiBold')
+F_SUB = font('Montserrat', 26, 'SemiBold')  # small subtitles (owner request)
 F_LABEL = font('Cinzel', 40, 'SemiBold')
 F_LABEL_S = font('Cinzel', 28, 'SemiBold')
 F_CARD = font('Cinzel', 120, 'Regular')
@@ -230,9 +230,9 @@ def sub_layer(text):
     lines, cur = [], ''
     for wd in text.split():
         tr = (cur + ' ' + wd).strip()
-        if d.textlength(tr, font=F_SUB) > 1500 * S: lines.append(cur); cur = wd
+        if d.textlength(tr, font=F_SUB) > 1560 * S: lines.append(cur); cur = wd
         else: cur = tr
-    lines.append(cur); lh = 42 * S; y = (bh - lh * len(lines)) / 2 - 2
+    lines.append(cur); lh = 34 * S; y = (bh - lh * len(lines)) / 2 - 2
     for ln in lines:
         if not LETTERBOX:  # no bar: add a soft shadow so text reads over the picture
             d.text(((W - d.textlength(ln, font=F_SUB)) / 2 + 2, y + 2), ln, font=F_SUB, fill=(0, 0, 0, 200))
