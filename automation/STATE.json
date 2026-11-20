@@ -1,6 +1,6 @@
 {
   "series": "Ramayan 3D (Hindi, Paper Atlas look)",
-  "next_part": 7,
+  "next_part": 8,
   "total_parts": 15,
   "uploaded": [
     {
@@ -37,6 +37,12 @@
       "part": 6,
       "video_id": "6KfQ_6iHoDA",
       "title": "रामायण भाग 6 | दंडक वन और पंचवटी | Ramayan Part 6 #shorts",
+      "privacy": "public"
+    },
+    {
+      "part": 7,
+      "video_id": "NR8Rd5PW4yU",
+      "title": "रामायण भाग 7 | सोने का हिरण और सीता हरण | Ramayan Part 7 #shorts",
       "privacy": "public"
     }
   ]

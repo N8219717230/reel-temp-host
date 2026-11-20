@@ -106,3 +106,30 @@ export function paduka(x, y, s = 1, glow = 0) { ctx.save(); ctx.translate(x, y);
 export function throne(x, y, s = 1) { ctx.save(); ctx.translate(x, y); ctx.scale(s, s); cut(P_poly([[-150, 0], [-150, -380], [-90, -440], [90, -440], [150, -380], [150, 0]]), P.wine, { shadow: 0.7, edge: 5 }); cut(P_rr(-190, -150, 380, 40, 8), P.gold, { shadow: 0.5, edge: 4 }); cut(P_rr(-210, -110, 420, 110, 10), '#A87A22', { shadow: 0.6, edge: 4 }); cut(P_circ(0, -330, 36), P.gold, { shadow: 0.4, edge: 3 }); ctx.restore(); }
 export function fireAltar(x, y, s = 1, t = 0) { ctx.save(); ctx.translate(x, y); ctx.scale(s, s); cut(P_rr(-110, -50, 220, 50, 8), '#8D8A84', { shadow: 0.6, edge: 4 }); cut(P_rr(-70, -90, 140, 40, 8), '#A6A39C', { shadow: 0.4, edge: 3 }); ctx.restore(); flame(x, y - 90 * s, 0.9 * s, t, 5); }
 export function lotus(x, y, s = 1) { ctx.save(); ctx.translate(x, y); ctx.scale(s, s); for (const a of [-0.9, 0.9, -0.45, 0.45, 0]) { ctx.save(); ctx.rotate(a); cut(P_poly([[0, 0], [-34, -70], [0, -130], [34, -70]]), a === 0 ? '#F0B6C0' : '#E48FA0', { shadow: 0.4, edge: 3 }); ctx.restore(); } ctx.restore(); }
+// ── Part 7 shapes ──
+/** golden deer made of cut paper (dir 1 = facing right). run = walking phase */
+export function deer(x, y, s = 1, dir = 1, run = 0) { ctx.save(); ctx.translate(x, y); ctx.scale(s * dir, s); const w = Math.sin(run) * 22;
+  for (const [lx, k] of [[-110, 1], [-70, -1], [90, -1], [130, 1]]) cut(P_poly([[lx - 12, -140], [lx + 12, -140], [lx + 8 + k * w, 0], [lx - 8 + k * w, 0]]), '#B8861F', { shadow: 0.5, edge: 3 });
+  cut(P_rr(-170, -260, 360, 140, 70), '#E3B23C', { shadow: 0.7, edge: 5 });
+  cut(P_poly([[130, -230], [190, -330], [250, -350], [262, -300], [200, -250]]), '#E3B23C', { shadow: 0.5, edge: 4 });
+  cut(P_circ(240, -330, 46), '#EDC25A', { shadow: 0.5, edge: 4 });
+  cut(P_poly([[215, -360], [190, -470], [230, -420], [250, -500], [262, -400], [300, -460], [280, -360]]), '#A87A22', { shadow: 0.4, edge: 3 });
+  for (const [px, py] of [[-110, -210], [-40, -230], [30, -200], [100, -225], [-60, -165], [50, -160]]) circle(px, py, 13, '#F6E2A0');
+  circle(252, -340, 7, P.ink); ctx.restore(); }
+/** paper chariot-ship in the sky (Pushpaka vimana) */
+export function vimana(x, y, s = 1, t = 0) { ctx.save(); ctx.translate(x, y + Math.sin(t * 2) * 8); ctx.scale(s, s);
+  cut(P_poly([[-300, -30], [300, -30], [230, 70], [-230, 70]]), P.gold, { shadow: 0.7, edge: 5 });
+  cut(P_poly([[-300, -30], [-400, -110], [-330, -10]]), '#A87A22', { shadow: 0.4, edge: 4 }); cut(P_poly([[300, -30], [400, -110], [330, -10]]), '#A87A22', { shadow: 0.4, edge: 4 });
+  cut(P_poly([[-120, -30], [-60, -190], [60, -190], [120, -30]]), '#F3E9D2', { shadow: 0.5, edge: 4 });
+  cut(P_poly([[-60, -190], [0, -290], [60, -190]]), P.crimson, { shadow: 0.5, edge: 4 }); ctx.restore(); }
+/** Ravana: dark plum robe, broad gold crown with many peaks */
+export function ravana(x, y, h = 560, dir = 1) { prince(x, y, h, '#3A2A38', dir, 0); const s = h / 640; ctx.save(); ctx.translate(x, y); ctx.scale(s * dir, s);
+  cut(P_poly([[-120, -560], [-140, -650], [-90, -610], [-60, -690], [-25, -630], [0, -720], [25, -630], [60, -690], [90, -610], [140, -650], [120, -560]]), P.gold, { shadow: 0.5, edge: 4 }); ctx.restore(); }
+/** ascetic in saffron robe with staff and hood */
+export function sadhu(x, y, h = 540, dir = 1, arm = 0) { const s = h / 640; ctx.save(); ctx.translate(x, y); ctx.scale(s * dir, s);
+  cut(P_rr(150, -500, 16, 500, 6), '#6E4A30', { shadow: 0.5, edge: 3 });
+  cut(P_poly([[-70, -470], [70, -470], [110, 0], [-110, 0]]), '#C97B2E'); cut(P_circ(0, -540, 66), P.skin);
+  cut(() => { ctx.beginPath(); ctx.arc(0, -550, 76, Math.PI, TAU); ctx.lineTo(70, -500); ctx.lineTo(-70, -500); ctx.closePath(); }, '#9A5A1E', { shadow: 0.4, edge: 4 });
+  cut(() => { ctx.beginPath(); ctx.save(); ctx.translate(30, -440); ctx.rotate((-(arm) - 10) * Math.PI / 180); ctx.roundRect(-20, 0, 40, 220, 20); ctx.restore(); }, '#C97B2E', { shadow: 0.5, edge: 4 }); ctx.restore(); }
+/** crimson boundary ring drawn around a spot, p = 0..1 */
+export function rekha(cx, cy, rx, ry, p) { if (p <= 0) return; ctx.save(); ctx.beginPath(); ctx.ellipse(cx, cy, rx, ry, 0, -Math.PI / 2, -Math.PI / 2 + TAU * clamp(p)); ctx.strokeStyle = P.crimson; ctx.lineWidth = 14; ctx.lineCap = 'round'; ctx.stroke(); ctx.restore(); }

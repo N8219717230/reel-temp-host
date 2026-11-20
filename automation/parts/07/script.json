@@ -1,0 +1,53 @@
+{
+ "title": "रामायण भाग 7: सोने का हिरण और सीता हरण",
+ "voice": "elevenlabs",
+ "music": "bed",
+ "lead": 0.4,
+ "outro": 1.2,
+ "sources": [
+  "Valmiki Ramayana, Aranya Kanda (Shurpanakha goes to Ravana, Ravana asks Maricha, Maricha as golden deer, Sita asks for it, Rama pursues, false cry, Lakshmana leaves, Ravana as ascetic, Sita carried away)",
+  "hindutone.com 'Aranya Kanda Summary'; wisdomlib Ramayana of Valmiki Aranya Kanda; Wikipedia 'Maricha'; the Lakshmana rekha is a popular later tradition (Ramcharitmanas / folk telling), included as the outline requires"
+ ],
+ "lines": [
+  {
+   "text": "शूर्पणखा की बात सुनकर, रावण ने योजना बनाई।",
+   "caps": "*शूर्पणखा की | बात *सुनकर | *रावण ने | *योजना | *बनाई"
+  },
+  {
+   "text": "उसने मारीच को सोने का हिरण बनाकर भेजा।",
+   "caps": "उसने *मारीच को | *सोने का | *हिरण बनाकर | *भेजा"
+  },
+  {
+   "text": "सीता ने उस सुंदर हिरण को देखा, और राम से उसे माँगा।",
+   "caps": "*सीता ने | उस *सुंदर | *हिरण को देखा | और *राम से | उसे *माँगा"
+  },
+  {
+   "text": "राम हिरण के पीछे गए, और लक्ष्मण रखवाली करते रहे।",
+   "caps": "*राम हिरण के | *पीछे गए | और *लक्ष्मण | *रखवाली | करते *रहे"
+  },
+  {
+   "text": "तभी वन में राम की पुकार सुनाई दी।",
+   "caps": "तभी *वन में | *राम की | *पुकार | सुनाई *दी"
+  },
+  {
+   "text": "सीता घबराईं, और लक्ष्मण को भेजा।",
+   "caps": "*सीता | *घबराईं | और *लक्ष्मण को | *भेजा"
+  },
+  {
+   "text": "जाने से पहले, लक्ष्मण ने कुटिया के चारों ओर रेखा खींची।",
+   "caps": "जाने से *पहले | *लक्ष्मण ने | कुटिया के *चारों ओर | *रेखा | *खींची"
+  },
+  {
+   "text": "तब रावण साधु के वेश में आया, और भिक्षा माँगी।",
+   "caps": "तब *रावण | *साधु के | वेश *में आया | और *भिक्षा | *माँगी"
+  },
+  {
+   "text": "सीता रेखा के बाहर आईं, और रावण उन्हें पुष्पक विमान में ले गया।",
+   "caps": "*सीता | *रेखा के | *बाहर आईं | और *रावण | उन्हें *पुष्पक विमान | में *ले गया"
+  },
+  {
+   "text": "अगले भाग में।",
+   "caps": "अगले *भाग में"
+  }
+ ]
+}
