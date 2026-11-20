@@ -7,3 +7,4 @@
 - The War of the Bucket, Modena vs Bologna 1325 (used 2026-11-17, Hindi)
 - The Whisky War, Hans Island, Canada vs Denmark 1984 (used 2026-11-18)
 - The Cardiff Giant hoax, George Hull & P.T. Barnum 1869 (used 2026-11-19)
+- The man who shipped himself as air cargo, Charles McKinley, New York to Texas 2003 (used 2026-11-20)
