@@ -133,3 +133,32 @@ export function sadhu(x, y, h = 540, dir = 1, arm = 0) { const s = h / 640; ctx.
   cut(() => { ctx.beginPath(); ctx.save(); ctx.translate(30, -440); ctx.rotate((-(arm) - 10) * Math.PI / 180); ctx.roundRect(-20, 0, 40, 220, 20); ctx.restore(); }, '#C97B2E', { shadow: 0.5, edge: 4 }); ctx.restore(); }
 /** crimson boundary ring drawn around a spot, p = 0..1 */
 export function rekha(cx, cy, rx, ry, p) { if (p <= 0) return; ctx.save(); ctx.beginPath(); ctx.ellipse(cx, cy, rx, ry, 0, -Math.PI / 2, -Math.PI / 2 + TAU * clamp(p)); ctx.strokeStyle = P.crimson; ctx.lineWidth = 14; ctx.lineCap = 'round'; ctx.stroke(); ctx.restore(); }
+// ── Part 8 shapes ──
+/** paper vulture Jatayu (dir 1 = facing right). hurt = 1 lowers the head and droops the wing */
+export function vulture(x, y, s = 1, dir = 1, hurt = 0) { ctx.save(); ctx.translate(x, y); ctx.scale(s * dir, s);
+  cut(P_poly([[-60, -10], [-20, -190], [200, -190], [230, -10]]), '#7A5A3A', { shadow: 0.7, edge: 5 });
+  cut(P_poly([[-250, -40 + hurt * 70], [-60, -170], [60, -80], [-120, 10 + hurt * 20]]), '#9A7650', { shadow: 0.6, edge: 4 });
+  cut(P_poly([[-300, -10 + hurt * 70], [-200, -60 + hurt * 70], [-120, 30 + hurt * 20]]), '#5E4429', { shadow: 0.4, edge: 3 });
+  cut(P_rr(130, -250 + hurt * 40, 50, 100, 22), '#7A5A3A', { shadow: 0.5, edge: 4 });
+  cut(P_circ(175, -260 + hurt * 60, 52), '#F1E3C6', { shadow: 0.6, edge: 4 });
+  cut(P_poly([[210, -270 + hurt * 60], [290, -235 + hurt * 60], [212, -225 + hurt * 60]]), P.gold, { shadow: 0.4, edge: 3 });
+  circle(188, -272 + hurt * 60, 7, P.ink);
+  for (const lx of [40, 110]) cut(P_rr(lx, -20, 16, 40, 6), '#5E4429', { shadow: 0.3, edge: 3 }); ctx.restore(); }
+/** gentle cut-paper kabandha: plum mound with long arms; free (0..1) turns it gold with a glow */
+export function kabandha(x, y, s = 1, free = 0) { ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  const body = free > 0.5 ? '#D9A93A' : '#5A4660', arm = free > 0.5 ? '#E8C262' : '#6E5878';
+  if (free > 0) { const g = ctx.createRadialGradient(0, -200, 20, 0, -200, 320); g.addColorStop(0, `rgba(242,193,78,${0.6 * free})`); g.addColorStop(1, 'rgba(242,193,78,0)'); ctx.fillStyle = g; ctx.fillRect(-340, -520, 680, 680); }
+  cut(P_poly([[-300, -300 + free * 120], [-170, -230], [-170, -150], [-310, -160 + free * 100]]), arm, { shadow: 0.6, edge: 4 });
+  cut(P_poly([[300, -300 + free * 120], [170, -230], [170, -150], [310, -160 + free * 100]]), arm, { shadow: 0.6, edge: 4 });
+  cut(() => { ctx.beginPath(); ctx.ellipse(0, -190, 190, 190, 0, 0, TAU); }, body, { shadow: 0.7, edge: 5 });
+  cut(P_circ(-60, -230, 20), '#F1E3C6', { shadow: 0, edge: 2 }); cut(P_circ(60, -230, 20), '#F1E3C6', { shadow: 0, edge: 2 });
+  circle(-60, -230, 9, P.ink); circle(60, -230, 9, P.ink); ctx.restore(); }
+/** woven basket piled with berries (wine-red) */
+export function berries(x, y, s = 1) { ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  for (const [bx, by] of [[-60, -90], [-10, -110], [45, -92], [-30, -60], [30, -58], [0, -140], [-80, -50], [80, -52]]) cut(P_circ(bx, by, 30), '#8C2F4A', { shadow: 0.5, edge: 3 });
+  cut(P_poly([[-130, -70], [130, -70], [100, 20], [-100, 20]]), '#B58A5A', { shadow: 0.7, edge: 5 });
+  for (const k of [-60, 0, 60]) { ctx.save(); ctx.strokeStyle = '#8A6A3F'; ctx.lineWidth = 6; ctx.beginPath(); ctx.moveTo(k, -66); ctx.lineTo(k * 0.8, 16); ctx.stroke(); ctx.restore(); } ctx.restore(); }
+/** still lake with lotus and a cut-paper shoreline */
+export function pampa(t, y = 1150) { cut(() => { ctx.beginPath(); ctx.ellipse(540, y + 200, 640, 250, 0, 0, TAU); }, P.sea, { shadow: 0.7, edge: 5 });
+  cut(() => { ctx.beginPath(); ctx.ellipse(540, y + 240, 480, 170, 0, 0, TAU); }, P.seaDark, { shadow: 0.4, edge: 4 });
+  for (const [lx, ly, ls] of [[250, y + 200, 0.6], [560, y + 270, 0.75], [820, y + 190, 0.55]]) lotus(lx, ly + Math.sin(t * 1.5 + lx) * 5, ls); }

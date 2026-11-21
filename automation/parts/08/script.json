@@ -1,0 +1,53 @@
+{
+ "title": "रामायण भाग 8: जटायु, शबरी और पंपा सरोवर",
+ "voice": "elevenlabs",
+ "music": "bed",
+ "lead": 0.4,
+ "outro": 1.2,
+ "sources": [
+  "Valmiki Ramayana, Aranya Kanda sargas 63-73 (wounded Jatayu tells Rama of Ravana and the south, Rama performs his last rites; Kabandha freed from his curse, sends them to Sugriva; Shabari's ashrama, fruit offered; Pampa lake)",
+  "hindutone.com 'Aranya Kanda Summary'; hindutone.com 'Shabari in the Ramayana'; wisdomlib Ramayana of Valmiki Aranya Kanda; Wikipedia 'Aranya Kanda'. Berries (ber) are the popular telling of Shabari's offering, Valmiki mentions fruits and roots"
+ ],
+ "lines": [
+  {
+   "text": "सीता को खोजते हुए, राम और लक्ष्मण वन में आगे बढ़े।",
+   "caps": "*सीता को | *खोजते हुए | *राम और | लक्ष्मण *वन में | *आगे बढ़े"
+  },
+  {
+   "text": "रास्ते में उन्हें घायल जटायु मिले।",
+   "caps": "*रास्ते में | उन्हें *घायल | *जटायु | *मिले"
+  },
+  {
+   "text": "जटायु ने बताया, कि रावण सीता को दक्षिण की ओर ले गया है।",
+   "caps": "*जटायु ने | *बताया | कि *रावण | सीता को *दक्षिण | की *ओर | ले *गया है"
+  },
+  {
+   "text": "राम ने आदर से, जटायु का अंतिम संस्कार किया।",
+   "caps": "*राम ने | *आदर से | जटायु का *अंतिम | *संस्कार किया"
+  },
+  {
+   "text": "आगे उन्हें कबंध मिला, जो श्राप से मुक्त हुआ।",
+   "caps": "आगे *उन्हें | *कबंध | *मिला | जो *श्राप से | *मुक्त हुआ"
+  },
+  {
+   "text": "उसने सुग्रीव से मित्रता करने की सलाह दी।",
+   "caps": "उसने *सुग्रीव से | *मित्रता | करने की *सलाह दी"
+  },
+  {
+   "text": "फिर वे शबरी के आश्रम पहुँचे।",
+   "caps": "*फिर वे | *शबरी के | *आश्रम | *पहुँचे"
+  },
+  {
+   "text": "शबरी ने प्रेम से, मीठे बेर खिलाए।",
+   "caps": "*शबरी ने | *प्रेम से | *मीठे | *बेर खिलाए"
+  },
+  {
+   "text": "इसके बाद, वे पंपा सरोवर के किनारे पहुँचे।",
+   "caps": "*इसके बाद | वे *पंपा | *सरोवर के | *किनारे पहुँचे"
+  },
+  {
+   "text": "अगले भाग में।",
+   "caps": "अगले *भाग में"
+  }
+ ]
+}
