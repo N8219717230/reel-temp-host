@@ -1,0 +1,49 @@
+{
+ "title": "रामायण भाग 9: हनुमान और सुग्रीव की मित्रता",
+ "voice": "elevenlabs",
+ "music": "bed",
+ "lead": 0.4,
+ "outro": 1.2,
+ "sources": [
+  "Valmiki Ramayana, Kishkindha Kanda sargas 1-5 (Sugriva on Rishyamukha sees Rama and Lakshmana, sends Hanuman; Hanuman, in the guise of an ascetic, speaks to them, then carries them to Sugriva; friendship sworn before the fire; Sita's dropped ornaments shown; Rama promises help, Sugriva promises to search for Sita)",
+  "wisdomlib 'Ramayana of Valmiki' Kishkindha Kanda; sanskritdocuments Valmiki Ramayan Kishkindha sarga 5; hindutone.com 'Kishkindha Kanda Summary'; Britannica 'Ramayana'"
+ ],
+ "lines": [
+  {
+   "text": "पंपा के पास, ऋष्यमूक पर्वत पर सुग्रीव रहते थे।",
+   "caps": "*पंपा के | *पास | *ऋष्यमूक | *पर्वत पर | *सुग्रीव | रहते *थे"
+  },
+  {
+   "text": "दो राजकुमारों को देखकर, उन्होंने हनुमान को भेजा।",
+   "caps": "*दो | *राजकुमारों को | *देखकर | उन्होंने *हनुमान को | *भेजा"
+  },
+  {
+   "text": "हनुमान विनम्र होकर राम और लक्ष्मण से मिले।",
+   "caps": "*हनुमान | *विनम्र होकर | *राम और | लक्ष्मण से *मिले"
+  },
+  {
+   "text": "उन्होंने राम को पहचान लिया, और अपने कंधों पर बिठाया।",
+   "caps": "उन्होंने *राम को | *पहचान लिया | और *अपने | *कंधों पर | *बिठाया"
+  },
+  {
+   "text": "वे उन्हें सुग्रीव के पास ले गए।",
+   "caps": "वे *उन्हें | *सुग्रीव के | *पास | ले *गए"
+  },
+  {
+   "text": "अग्नि को साक्षी मानकर, राम और सुग्रीव मित्र बन गए।",
+   "caps": "*अग्नि को | *साक्षी | मानकर *राम और | *सुग्रीव | *मित्र बन गए"
+  },
+  {
+   "text": "सुग्रीव ने सीता के गिराए गहने दिखाए।",
+   "caps": "*सुग्रीव ने | *सीता के | गिराए *गहने | *दिखाए"
+  },
+  {
+   "text": "राम ने सहायता का वचन दिया, और सुग्रीव ने सीता को खोजने का।",
+   "caps": "*राम ने | *सहायता का | *वचन दिया | और *सुग्रीव ने | *सीता को | *खोजने का"
+  },
+  {
+   "text": "अगले भाग में।",
+   "caps": "अगले *भाग में"
+  }
+ ]
+}

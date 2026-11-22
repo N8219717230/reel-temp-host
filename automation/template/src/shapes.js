@@ -162,3 +162,20 @@ export function berries(x, y, s = 1) { ctx.save(); ctx.translate(x, y); ctx.scal
 export function pampa(t, y = 1150) { cut(() => { ctx.beginPath(); ctx.ellipse(540, y + 200, 640, 250, 0, 0, TAU); }, P.sea, { shadow: 0.7, edge: 5 });
   cut(() => { ctx.beginPath(); ctx.ellipse(540, y + 240, 480, 170, 0, 0, TAU); }, P.seaDark, { shadow: 0.4, edge: 4 });
   for (const [lx, ly, ls] of [[250, y + 200, 0.6], [560, y + 270, 0.75], [820, y + 190, 0.55]]) lotus(lx, ly + Math.sin(t * 1.5 + lx) * 5, ls); }
+/** vanara (monkey-folk) figure: robe colour, optional crown, tail curl. Hanuman = orange robe, Sugriva = deep gold + crown. */
+export function vanara(x, y, h = 540, robe = '#E07A1F', dir = 1, crownOn = false, arm = 0) { const s = h / 640; ctx.save(); ctx.translate(x, y); ctx.scale(s * dir, s);
+  cut(() => { ctx.beginPath(); ctx.moveTo(-90, -120); ctx.bezierCurveTo(-210, -150, -230, -330, -140, -380); ctx.lineWidth = 0; ctx.lineTo(-120, -350); ctx.bezierCurveTo(-180, -300, -170, -190, -70, -160); ctx.closePath(); }, '#B07A45', { shadow: 0.5, edge: 4 });
+  cut(P_poly([[-66, -420], [66, -420], [105, 0], [-105, 0]]), robe);
+  cut(P_rr(-88, -170, 176, 20, 6), P.gold, { shadow: 0.3, edge: 3 });
+  for (const k of [-1, 1]) cut(P_rr(k * 68 - 17, -410 + (k === 1 ? -arm * 2 : 0), 34, 190, 17), '#B07A45', { shadow: 0.4, edge: 4 });
+  for (const k of [-1, 1]) cut(P_circ(k * 68, -470, 28), '#B07A45', { shadow: 0.3, edge: 3 });
+  cut(P_circ(0, -490, 66), '#B07A45'); cut(P_circ(-58, -498, 24), '#D9A777', { shadow: 0, edge: 3 }); cut(P_circ(58, -498, 24), '#D9A777', { shadow: 0, edge: 3 });
+  cut(() => { ctx.beginPath(); ctx.ellipse(0, -468, 40, 34, 0, 0, TAU); }, '#E7C79A', { shadow: 0, edge: 3 });
+  if (crownOn) cut(P_poly([[-50, -540], [-56, -612], [-26, -574], [0, -626], [26, -574], [56, -612], [50, -540]]), P.gold, { shadow: 0.4, edge: 4 });
+  ctx.restore(); }
+/** the little bundle of dropped jewels (necklace, bangles) on a cloth */
+export function gahne(x, y, s = 1, glow = 0) { ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  if (glow) { const g = ctx.createRadialGradient(0, -30, 10, 0, -30, 170); g.addColorStop(0, `rgba(242,193,78,${0.6 * glow})`); g.addColorStop(1, 'rgba(242,193,78,0)'); ctx.fillStyle = g; ctx.fillRect(-180, -210, 360, 360); }
+  cut(P_poly([[-150, 0], [150, 0], [120, -60], [-120, -60]]), P.crimson, { shadow: 0.6, edge: 4 });
+  for (const [bx, by] of [[-60, -80], [0, -96], [60, -80]]) { cut(() => { ctx.beginPath(); ctx.ellipse(bx, by, 40, 40, 0, 0, TAU); ctx.moveTo(bx + 24, by); ctx.ellipse(bx, by, 24, 24, 0, 0, TAU, true); }, P.gold, { shadow: 0.4, edge: 3 }); }
+  for (let i = 0; i < 7; i++) cut(P_circ(-90 + i * 30, -30 + Math.abs(i - 3) * -6, 12), '#F3E9D2', { shadow: 0.2, edge: 2 }); ctx.restore(); }
