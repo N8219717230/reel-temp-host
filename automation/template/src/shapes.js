@@ -179,3 +179,21 @@ export function gahne(x, y, s = 1, glow = 0) { ctx.save(); ctx.translate(x, y); 
   cut(P_poly([[-150, 0], [150, 0], [120, -60], [-120, -60]]), P.crimson, { shadow: 0.6, edge: 4 });
   for (const [bx, by] of [[-60, -80], [0, -96], [60, -80]]) { cut(() => { ctx.beginPath(); ctx.ellipse(bx, by, 40, 40, 0, 0, TAU); ctx.moveTo(bx + 24, by); ctx.ellipse(bx, by, 24, 24, 0, 0, TAU, true); }, P.gold, { shadow: 0.4, edge: 3 }); }
   for (let i = 0; i < 7; i++) cut(P_circ(-90 + i * 30, -30 + Math.abs(i - 3) * -6, 12), '#F3E9D2', { shadow: 0.2, edge: 2 }); ctx.restore(); }
+/** Kishkindha: a hill-city with a cave gate, little flags and windows */
+export function kishkindha(x, y, s = 1, flags = 1) { ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  cut(P_poly([[-320, 0], [-250, -230], [-120, -330], [0, -420], [130, -340], [260, -240], [330, 0]]), '#8D8A84', { shadow: 0.7, edge: 5 });
+  cut(P_poly([[-120, -330], [0, -420], [130, -340], [20, -250]]), '#A6A39C', { shadow: 0.3, edge: 3 });
+  cut(P_rr(-70, -190, 140, 190, 70), '#4A3A2E', { shadow: 0.3, edge: 4 });
+  for (const [wx, wy] of [[-190, -120], [190, -120], [-110, -250], [110, -250]]) cut(P_rr(wx - 22, wy - 34, 44, 68, 22), '#4A3A2E', { shadow: 0.2, edge: 3 });
+  if (flags > 0) for (const fx of [-260, 0, 250]) { const fy = fx === 0 ? -420 : -230; ctx.save(); ctx.globalAlpha = Math.min(1, flags); cut(P_rr(fx - 3, fy - 130, 6, 130, 2), '#6E4A30', { shadow: 0.3, edge: 2 }); cut(P_poly([[fx + 3, fy - 130], [fx + 70, fy - 105], [fx + 3, fy - 80]]), P.crimson, { shadow: 0.4, edge: 3 }); ctx.restore(); }
+  ctx.restore(); }
+/** paper rain cloud with falling drops */
+export function rain(t, y = 300, a = 1) { ctx.save(); ctx.globalAlpha = a;
+  for (const [cx, cy, r] of [[200, y, 130], [420, y - 40, 170], [680, y - 10, 150], [900, y + 20, 130]]) cut(P_circ(cx, cy, r), '#7C8796', { shadow: 0.6, edge: 5 });
+  for (let i = 0; i < 38; i++) { const x = 60 + (i * 97) % 960, yy = y + 140 + ((t * 520 + i * 173) % 880); ctx.strokeStyle = '#4F6D8A'; ctx.lineWidth = 7; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(x, yy); ctx.lineTo(x - 10, yy + 34); ctx.stroke(); }
+  ctx.restore(); }
+/** gold signet ring */
+export function ring(x, y, s = 1, glow = 0) { ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  if (glow) { const g = ctx.createRadialGradient(0, 0, 10, 0, 0, 170); g.addColorStop(0, `rgba(242,193,78,${0.7 * glow})`); g.addColorStop(1, 'rgba(242,193,78,0)'); ctx.fillStyle = g; ctx.fillRect(-180, -180, 360, 360); }
+  cut(() => { ctx.beginPath(); ctx.arc(0, 0, 90, 0, TAU); ctx.moveTo(56, 0); ctx.arc(0, 0, 56, 0, TAU, true); }, P.gold, { shadow: 0.5, edge: 4 });
+  cut(P_poly([[0, -122], [34, -92], [0, -62], [-34, -92]]), P.crimson, { shadow: 0.4, edge: 3 }); ctx.restore(); }

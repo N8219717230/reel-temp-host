@@ -1,0 +1,53 @@
+{
+ "title": "रामायण भाग 10: सुग्रीव किष्किंधा के राजा",
+ "voice": "elevenlabs",
+ "music": "bed",
+ "lead": 0.4,
+ "outro": 1.2,
+ "sources": [
+  "Valmiki Ramayana, Kishkindha Kanda sargas 6-44 (Vali had driven Sugriva from Kishkindha; Rama keeps his promise and justice is restored; Sugriva is consecrated king; the four months of rains; vanara search parties sent to the four directions; Hanuman to the south with Rama's ring)",
+  "wisdomlib 'Ramayana of Valmiki' Kishkindha Kanda; hindutone.com 'Kishkindha Kanda Summary'; Britannica 'Ramayana'"
+ ],
+ "lines": [
+  {
+   "text": "पिछले भाग में, राम और सुग्रीव मित्र बने थे।",
+   "caps": "*पिछले | भाग *में | *राम और | *सुग्रीव | मित्र *बने थे"
+  },
+  {
+   "text": "सुग्रीव के भाई वाली ने, उन्हें किष्किंधा से निकाल दिया था।",
+   "caps": "*सुग्रीव के | भाई *वाली ने | *उन्हें | *किष्किंधा से | निकाल *दिया था"
+  },
+  {
+   "text": "राम ने मित्रता निभाई, और किष्किंधा में न्याय हुआ।",
+   "caps": "*राम ने | *मित्रता | *निभाई | और *किष्किंधा में | *न्याय हुआ"
+  },
+  {
+   "text": "वानरों के नगर में फिर शांति लौट आई।",
+   "caps": "*वानरों के | नगर *में | फिर *शांति | *लौट आई"
+  },
+  {
+   "text": "सुग्रीव किष्किंधा के राजा बने।",
+   "caps": "*सुग्रीव | *किष्किंधा के | *राजा | *बने"
+  },
+  {
+   "text": "वर्षा के चार महीने बीत गए।",
+   "caps": "*वर्षा के | *चार | *महीने | बीत *गए"
+  },
+  {
+   "text": "फिर सुग्रीव ने सारे वानर बुलाए।",
+   "caps": "फिर *सुग्रीव ने | *सारे | *वानर | *बुलाए"
+  },
+  {
+   "text": "उन्होंने चारों दिशाओं में, खोजी दल भेजे।",
+   "caps": "*उन्होंने | *चारों | *दिशाओं में | *खोजी दल | *भेजे"
+  },
+  {
+   "text": "हनुमान दक्षिण की ओर चले, राम की अँगूठी लेकर।",
+   "caps": "*हनुमान | *दक्षिण की | ओर *चले | *राम की | *अँगूठी लेकर"
+  },
+  {
+   "text": "अगले भाग में।",
+   "caps": "अगले *भाग में"
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 {
   "series": "Ramayan 3D (Hindi, Paper Atlas look)",
-  "next_part": 10,
+  "next_part": 11,
   "total_parts": 15,
   "uploaded": [
     {
@@ -55,6 +55,12 @@
       "part": 9,
       "video_id": "PefsQZ8Cc-0",
       "title": "रामायण भाग 9 | हनुमान और सुग्रीव की मित्रता | Ramayan Part 9 #shorts",
+      "privacy": "public"
+    },
+    {
+      "part": 10,
+      "video_id": "IiCcmJDUC4g",
+      "title": "रामायण भाग 10 | सुग्रीव किष्किंधा के राजा | Ramayan Part 10 #shorts",
       "privacy": "public"
     }
   ]
