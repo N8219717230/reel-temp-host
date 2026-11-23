@@ -7,3 +7,4 @@
 - The Polynesian settlement of the Pacific (used 2026-11-20, https://youtube.com/watch?v=f3G2vHxAaxY)
 - The Great Wall of China: what it really was (used 2026-11-21, https://youtube.com/watch?v=gJXHnNvfuOg)
 - The fall of Constantinople, 1453 (used 2026-11-22, https://youtube.com/watch?v=Dj6SKDv8zqE)
+- The Viking voyage to North America (L'Anse aux Meadows) (used 2026-11-23, https://youtube.com/watch?v=gWd48yjYvY4)
