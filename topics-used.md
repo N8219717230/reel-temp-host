@@ -10,3 +10,4 @@
 - The man who shipped himself as air cargo, Charles McKinley, New York to Texas 2003 (used 2026-11-20)
 - The Berners Street hoax, Theodore Hook's guinea bet, London 1810 (used 2026-11-21)
 - The Oregon exploding whale, Florence 1970, George Thornton's dynamite plan (used 2026-11-22)
+- Emperor Norton, San Francisco 1859 (used 2026-11-23)
