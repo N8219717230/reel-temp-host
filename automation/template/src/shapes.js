@@ -197,3 +197,21 @@ export function ring(x, y, s = 1, glow = 0) { ctx.save(); ctx.translate(x, y); c
   if (glow) { const g = ctx.createRadialGradient(0, 0, 10, 0, 0, 170); g.addColorStop(0, `rgba(242,193,78,${0.7 * glow})`); g.addColorStop(1, 'rgba(242,193,78,0)'); ctx.fillStyle = g; ctx.fillRect(-180, -180, 360, 360); }
   cut(() => { ctx.beginPath(); ctx.arc(0, 0, 90, 0, TAU); ctx.moveTo(56, 0); ctx.arc(0, 0, 56, 0, TAU, true); }, P.gold, { shadow: 0.5, edge: 4 });
   cut(P_poly([[0, -122], [34, -92], [0, -62], [-34, -92]]), P.crimson, { shadow: 0.4, edge: 3 }); ctx.restore(); }
+// ── Part 11 shapes ──
+/** Lanka: golden island city with towers and domes */
+export function lanka(x, y, s = 1, glow = 0) { ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  cut(() => { ctx.beginPath(); ctx.ellipse(0, 0, 420, 70, 0, 0, TAU); }, '#8A6A3F', { shadow: 0.6, edge: 5 });
+  for (const [tx, tw, th] of [[-250, 90, 200], [-120, 110, 300], [0, 130, 420], [130, 110, 300], [260, 90, 200]]) { cut(P_rr(tx - tw / 2, -th, tw, th, 6), P.gold, { shadow: 0.6, edge: 4 }); cut(P_poly([[tx - tw / 2 - 8, -th], [tx, -th - tw * 0.8], [tx + tw / 2 + 8, -th]]), '#A87A22', { shadow: 0.5, edge: 4 }); cut(P_rr(tx - 14, -th * 0.55, 28, 50, 14), '#4A3A2E', { shadow: 0.2, edge: 3 }); }
+  if (glow) { ctx.globalAlpha = glow; for (const [fx, fy, fs] of [[-250, -210, 0.55], [0, -440, 0.7], [260, -210, 0.55]]) flame(fx, fy, fs, performance.now() / 1000, fx); }
+  ctx.restore(); }
+/** blossoming ashoka tree */
+export function ashoka(x, y, s = 1) { ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  cut(P_rr(-20, -260, 40, 260, 6), '#6E4A30', { shadow: 0.5, edge: 3 });
+  for (const [cx, cy, r] of [[-110, -300, 110], [110, -310, 115], [0, -400, 130]]) cut(P_circ(cx, cy, r), '#5E8A4B', { shadow: 0.6, edge: 4 });
+  for (const [bx, by] of [[-120, -320], [-30, -440], [90, -340], [150, -280], [-60, -270], [30, -370], [-170, -270]]) cut(P_circ(bx, by, 22), '#E8704A', { shadow: 0.3, edge: 3 });
+  ctx.restore(); }
+/** chudamani: gold hair jewel with a crimson stone and glow */
+export function chudamani(x, y, s = 1, glow = 0) { ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  if (glow) { const g = ctx.createRadialGradient(0, 0, 10, 0, 0, 190); g.addColorStop(0, `rgba(242,193,78,${0.75 * glow})`); g.addColorStop(1, 'rgba(242,193,78,0)'); ctx.fillStyle = g; ctx.fillRect(-200, -200, 400, 400); }
+  cut(P_poly([[0, -110], [80, -30], [50, 80], [-50, 80], [-80, -30]]), P.gold, { shadow: 0.6, edge: 4 });
+  cut(P_poly([[0, -60], [40, -20], [0, 40], [-40, -20]]), P.crimson, { shadow: 0.4, edge: 3 }); ctx.restore(); }
