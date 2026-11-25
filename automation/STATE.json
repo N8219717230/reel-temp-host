@@ -1,6 +1,6 @@
 {
   "series": "Ramayan 3D (Hindi, Paper Atlas look)",
-  "next_part": 12,
+  "next_part": 13,
   "total_parts": 15,
   "uploaded": [
     {
@@ -67,6 +67,12 @@
       "part": 11,
       "video_id": "WRntju-tFXM",
       "title": "रामायण भाग 11 | हनुमान की उड़ान और लंका | Ramayan Part 11 #shorts",
+      "privacy": "public"
+    },
+    {
+      "part": 12,
+      "video_id": "ouh28VN-C6s",
+      "title": "रामायण भाग 12 | विभीषण और राम सेतु | Ramayan Part 12 #shorts",
       "privacy": "public"
     }
   ]
