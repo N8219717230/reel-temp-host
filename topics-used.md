@@ -12,3 +12,4 @@
 - The Oregon exploding whale, Florence 1970, George Thornton's dynamite plan (used 2026-11-22)
 - Emperor Norton, San Francisco 1859 (used 2026-11-23)
 - Stubbs the cat, honorary mayor of Talkeetna, Alaska 1997-2017 (used 2026-11-24)
+- The Great Moon Hoax, New York Sun 1835, bat-men on the moon (used 2026-11-25)
