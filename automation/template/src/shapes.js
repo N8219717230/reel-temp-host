@@ -215,3 +215,10 @@ export function chudamani(x, y, s = 1, glow = 0) { ctx.save(); ctx.translate(x, 
   if (glow) { const g = ctx.createRadialGradient(0, 0, 10, 0, 0, 190); g.addColorStop(0, `rgba(242,193,78,${0.75 * glow})`); g.addColorStop(1, 'rgba(242,193,78,0)'); ctx.fillStyle = g; ctx.fillRect(-200, -200, 400, 400); }
   cut(P_poly([[0, -110], [80, -30], [50, 80], [-50, 80], [-80, -30]]), P.gold, { shadow: 0.6, edge: 4 });
   cut(P_poly([[0, -60], [40, -20], [0, 40], [-40, -20]]), P.crimson, { shadow: 0.4, edge: 3 }); ctx.restore(); }
+
+// Part 12 shapes
+export function setu(x0, x1, y, p, t = 0) { // stone bridge laid from x0 toward x1 up to progress p (0..1)
+  const n = 14, w = (x1 - x0) / n; const k = Math.floor(clamp(p) * n + 0.0001);
+  for (let i = 0; i < k; i++) { const dy = Math.sin(i * 1.7) * 4; cut(P_rr(x0 + i * w, y + dy - 22, w + 6, 44, 10), i % 2 ? '#A6A39C' : '#8D8A84', { shadow: 0.6, edge: 4 }); }
+}
+export function vanaraRow(x, y, n, gap, h, dir = 1, t = 0, robe = '#E07A1F') { for (let i = 0; i < n; i++) vanara(x + i * gap * dir, y + Math.sin(t * 6 + i) * 4, h, i % 2 ? '#C9772B' : robe, dir, false, 0); }
