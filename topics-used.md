@@ -13,3 +13,4 @@
 - Emperor Norton, San Francisco 1859 (used 2026-11-23)
 - Stubbs the cat, honorary mayor of Talkeetna, Alaska 1997-2017 (used 2026-11-24)
 - The Great Moon Hoax, New York Sun 1835, bat-men on the moon (used 2026-11-25)
+- The War of Jenkins' Ear, Britain vs Spain 1739 (used 2026-11-26)
