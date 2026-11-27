@@ -1,6 +1,6 @@
 {
   "series": "Ramayan 3D (Hindi, Paper Atlas look)",
-  "next_part": 13,
+  "next_part": 14,
   "total_parts": 15,
   "uploaded": [
     {
@@ -73,6 +73,12 @@
       "part": 12,
       "video_id": "ouh28VN-C6s",
       "title": "रामायण भाग 12 | विभीषण और राम सेतु | Ramayan Part 12 #shorts",
+      "privacy": "public"
+    },
+    {
+      "part": 13,
+      "video_id": "eGxDcE4nEnk",
+      "title": "रामायण भाग 13 | लंका का युद्ध और संजीवनी | Ramayan Part 13 #shorts",
       "privacy": "public"
     }
   ]

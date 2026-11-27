@@ -1,0 +1,23 @@
+{
+ "title": "रामायण भाग 13: लंका का युद्ध और संजीवनी",
+ "voice": "elevenlabs",
+ "music": "bed",
+ "lead": 0.4,
+ "outro": 1.2,
+ "sources": [
+  "Valmiki Ramayana, Yuddha Kanda sarga 41 (Angada sent to Ravana as envoy), sarga 101-102 (Lakshmana falls to Indrajit's shakti, Jambavan sends Hanuman for the herbs of Mount Rishabha/Kailasa), sarga 74 (Hanuman brings the mountain, Lakshmana revived)",
+  "hindutone.com 'Yuddha Kanda Summary'; wisdomlib Ramayana of Valmiki Yuddha Kanda; en.wikipedia 'Angada'; Britannica 'Ramayana'"
+ ],
+ "lines": [
+  {"text": "पिछले भाग में, सेना लंका पहुँची थी।", "caps": "*पिछले | भाग *में | *सेना | *लंका | *पहुँची थी"},
+  {"text": "पहले, अंगद शांति का संदेश लेकर, रावण के दरबार गए।", "caps": "*पहले | *अंगद | *शांति का | *संदेश | *लेकर | *रावण के | *दरबार गए"},
+  {"text": "पर रावण नहीं माना।", "caps": "पर *रावण | *नहीं | *माना"},
+  {"text": "तब दोनों सेनाएँ, आमने सामने आ गईं।", "caps": "*तब | *दोनों | *सेनाएँ | *आमने सामने | आ *गईं"},
+  {"text": "युद्ध में लक्ष्मण घायल होकर, मूर्छित हो गए।", "caps": "*युद्ध में | *लक्ष्मण | *घायल | होकर *मूर्छित | हो *गए"},
+  {"text": "राम का मन बहुत दुखी हो गया।", "caps": "*राम का | *मन | बहुत *दुखी | हो *गया"},
+  {"text": "जांबवान ने हनुमान को, हिमालय की ओर भेजा।", "caps": "*जांबवान ने | *हनुमान को | *हिमालय | की ओर *भेजा"},
+  {"text": "हनुमान उड़कर पहुँचे, और पूरा पर्वत ही उठा लाए।", "caps": "*हनुमान | *उड़कर | *पहुँचे | और *पूरा | *पर्वत ही | उठा *लाए"},
+  {"text": "संजीवनी से, लक्ष्मण फिर उठ खड़े हुए।", "caps": "*संजीवनी से | *लक्ष्मण | *फिर | उठ *खड़े हुए"},
+  {"text": "अगले भाग में।", "caps": "अगले *भाग में"}
+ ]
+}

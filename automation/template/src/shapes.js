@@ -222,3 +222,16 @@ export function setu(x0, x1, y, p, t = 0) { // stone bridge laid from x0 toward 
   for (let i = 0; i < k; i++) { const dy = Math.sin(i * 1.7) * 4; cut(P_rr(x0 + i * w, y + dy - 22, w + 6, 44, 10), i % 2 ? '#A6A39C' : '#8D8A84', { shadow: 0.6, edge: 4 }); }
 }
 export function vanaraRow(x, y, n, gap, h, dir = 1, t = 0, robe = '#E07A1F') { for (let i = 0; i < n; i++) vanara(x + i * gap * dir, y + Math.sin(t * 6 + i) * 4, h, i % 2 ? '#C9772B' : robe, dir, false, 0); }
+// ── Part 13 shapes ──
+/** hand-held torch of paper flame */
+export function torch(x, y, s = 1, t = 0, seed = 0) { ctx.save(); ctx.translate(x, y); ctx.scale(s, s); cut(P_rr(-12, -240, 24, 240, 6), '#6E4A30', { shadow: 0.5, edge: 3 }); ctx.restore(); flame(x, y - 240 * s, 0.55 * s, t, seed); }
+/** the Sanjeevani mountain: green peaks with glowing golden herbs */
+export function sanjeevani(x, y, s = 1, glow = 1, t = 0) { ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+  if (glow) { const g = ctx.createRadialGradient(0, -200, 20, 0, -200, 360); g.addColorStop(0, `rgba(242,193,78,${0.6 * glow})`); g.addColorStop(1, 'rgba(242,193,78,0)'); ctx.fillStyle = g; ctx.fillRect(-380, -560, 760, 760); }
+  cut(P_poly([[-300, 0], [-170, -230], [-60, -150], [60, -380], [190, -190], [300, 0]]), '#5E8A4B', { shadow: 0.7, edge: 5 });
+  cut(P_poly([[60, -380], [190, -190], [110, -210], [20, -240]]), '#F3E9D2', { shadow: 0.3, edge: 3 });
+  cut(P_poly([[-300, 0], [-120, -110], [20, -40], [150, -100], [300, 0]]), '#3E5F3F', { shadow: 0.5, edge: 4 });
+  for (const [hx, hy] of [[-150, -180], [-40, -110], [90, -250], [160, -120], [-90, -50]]) circle(hx, hy - 6 * Math.sin(t * 4 + hx), 14, '#F2C14E');
+  ctx.restore(); }
+/** a figure lying down, wounded (rotated prince) */
+export function lying(x, y, h, col, rot = -Math.PI / 2) { ctx.save(); ctx.translate(x, y); ctx.rotate(rot); prince(0, 0, h, col, 1, 0); ctx.restore(); }
