@@ -14,3 +14,4 @@
 - Stubbs the cat, honorary mayor of Talkeetna, Alaska 1997-2017 (used 2026-11-24)
 - The Great Moon Hoax, New York Sun 1835, bat-men on the moon (used 2026-11-25)
 - The War of Jenkins' Ear, Britain vs Spain 1739 (used 2026-11-26)
+- Lord Timothy Dexter, Newburyport warming pans, coal to Newcastle and mittens, 1790s (used 2026-11-27)
