@@ -15,3 +15,4 @@
 - The Great Moon Hoax, New York Sun 1835, bat-men on the moon (used 2026-11-25)
 - The War of Jenkins' Ear, Britain vs Spain 1739 (used 2026-11-26)
 - Lord Timothy Dexter, Newburyport warming pans, coal to Newcastle and mittens, 1790s (used 2026-11-27)
+- The tomato is a vegetable, Nix v. Hedden Supreme Court tariff case 1893 (used 2026-11-28)
