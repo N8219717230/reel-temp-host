@@ -1,6 +1,6 @@
 {
   "series": "Ramayan 3D (Hindi, Paper Atlas look)",
-  "next_part": 14,
+  "next_part": 15,
   "total_parts": 15,
   "uploaded": [
     {
@@ -79,6 +79,12 @@
       "part": 13,
       "video_id": "eGxDcE4nEnk",
       "title": "रामायण भाग 13 | लंका का युद्ध और संजीवनी | Ramayan Part 13 #shorts",
+      "privacy": "public"
+    },
+    {
+      "part": 14,
+      "video_id": "eP2nGzu4aWY",
+      "title": "रामायण भाग 14 | रावण का अंत और विभीषण का राज्याभिषेक | Ramayan Part 14 #shorts",
       "privacy": "public"
     }
   ]

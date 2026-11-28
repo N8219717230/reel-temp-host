@@ -235,3 +235,9 @@ export function sanjeevani(x, y, s = 1, glow = 1, t = 0) { ctx.save(); ctx.trans
   ctx.restore(); }
 /** a figure lying down, wounded (rotated prince) */
 export function lying(x, y, h, col, rot = -Math.PI / 2) { ctx.save(); ctx.translate(x, y); ctx.rotate(rot); prince(0, 0, h, col, 1, 0); ctx.restore(); }
+// ── Part 14 shapes ──
+/** Ravana's great crown with ten peaks (paper, gold), rot tilts it as it falls */
+export function tenCrown(x, y, s = 1, rot = 0, a = 1) { ctx.save(); ctx.globalAlpha = a; ctx.translate(x, y); ctx.rotate(rot); ctx.scale(s, s);
+  const pts = [[-330, 0], [-330, -120]]; for (let i = 0; i < 10; i++) { const px = -330 + i * 73 + 36; pts.push([px - 36, -120], [px, -240 - (i % 2 ? 0 : 40)]); } pts.push([330, -120], [330, 0]);
+  cut(P_poly(pts), P.gold, { shadow: 0.6, edge: 5 }); cut(P_rr(-340, -30, 680, 50, 10), '#A87A22', { shadow: 0.4, edge: 4 });
+  for (let i = 0; i < 5; i++) cut(P_circ(-240 + i * 120, -6, 18), P.crimson, { shadow: 0.2, edge: 2 }); ctx.restore(); }
